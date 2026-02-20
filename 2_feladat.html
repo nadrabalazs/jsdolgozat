@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>Nádra Balázs</title>
+    <link rel="stylesheet" href="kozos_stilus.css">
+    <script src="2_script.js"></script>
+</head>
+
+<body>
+    <h1>2. feladat</h1>
+    <form>
+        <fieldset>
+            <legend>Táblázat paraméterei</legend>
+            <label for="rows">Sorok száma: </label>
+            <label for="rows" id="rows_ID" class="eredmeny"></label>
+            <input type="range" name="rows" id="rows" min="2" max="10" onchange="Refresh()">
+            <label for="columns">Cellák száma: </label>
+            <label for="columns" id="columns_ID" class="eredmeny"></label>
+            <input type="range" name="columns" id="columns" min="3" max="20" onchange="Refresh()">
+            <input type="checkbox" name="first_row" id="first_row" checked>
+            <label for="first_row">Az első sor cellái TH-k legyenek?</label>
+        </fieldset>
+        <input type="button" value="Táblázat létrehozása" onclick="Letrehoz()">
+    </form>
+    
+    <div>
+        <table id="ID_tablazat"></table>
+    </div>
+</body>
+
+</html>
